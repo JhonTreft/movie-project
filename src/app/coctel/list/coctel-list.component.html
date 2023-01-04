@@ -1,0 +1,60 @@
+
+<div class="container">
+  <br/>
+  <br/>
+
+<div class="row g-3">
+  <div class="col-auto">
+    <h2 class="text-white"> <b>Name</b> </h2>
+  </div>
+<input class="form-control" list="datalistOptions" id="exampleDataList" [(ngModel)]='search' placeholder="Type to search...">
+<datalist id="datalistOptions">
+  <option value="black">
+  <option value="red">
+</datalist> 
+<div>
+  <button type="button" class="btn btn-outline-primary" (click)="touch();"><b>Search 🔎</b></button>
+</div>
+</div>
+</div>
+
+
+
+
+<br/>
+<br/>
+
+
+<div class="container">
+   <div class="alert alert-success" *ngIf="info.message != ''" role="alert">
+  <h4 class="alert-heading"> ❌ Coctel not found</h4>
+  <p> 🕯 No Se Encontraron Resultados Para Tu Busqueda 🔍 , Verifica Si Lo Escribistes Correctamente ✔</p>
+</div>
+
+<div class="card-group ellipsis">
+<div class="col-md-6 ellipsis mb-4" *ngFor="let co of cocteles">
+  <div class="card bg-dark text-white h-100 " style="max-width: 540px;">
+    <div class="row g-0 ">
+    <div class="col-md-4">
+      <img src="{{co.strDrinkThumb}}" class="img-fluid rounded-start" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+         <h5 class="card-title"><b>{{co.strDrink}}</b></h5>
+          <span>{{co.strCategory}} - </span>
+          <span>{{co.idDrink}}</span>
+        
+          <p class="card-text">{{co.strInstructions.slice(0,40)}}</p>
+          <a  class="btn btn-primary" [routerLink]="['/coctel/detail/', co.idDrink]">
+            <b>View More</b>
+          </a>
+       </div>
+    </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+
+

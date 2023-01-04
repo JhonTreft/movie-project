@@ -1,0 +1,60 @@
+<br />
+<br />
+<br />
+<br />
+<div class="container text-white">
+  <div class="col-4 mb-3">
+    <label for="exampleFormControlInput1" class="form-label"><b>Name</b></label>
+    <input type="text" class="form-control" id="exampleFormControlInput1" [(ngModel)]="name" placeholder="name">
+    <div class="form-check form-check-inline">
+      <br />
+      <p><b>Plataforma</b></p>
+      <input class="form-check-input" type="checkbox" value="" [(ngModel)]="web" id="flexCheckDefault">
+      <label class="form-check-label" for="flexCheckDefault">
+        Web
+      </label>
+    </div>
+
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="checkbox" value="" [(ngModel)]="movil" id="flexCheckChecked" checked>
+      <label class="form-check-label" for="flexCheckChecked">
+        Movil
+      </label>
+    </div>
+
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="checkbox" value="" [(ngModel)]="desktop" id="flexCheckChecked" checked>
+      <label class="form-check-label" for="flexCheckChecked">
+        Escritorio
+      </label>
+    </div>
+
+
+
+  </div>
+  <div class="row">
+    <div class="col-8">
+      <p><b>Image</b></p>
+      <input type="file" name="name" value="" class="btn btn-secondary">
+    </div>
+    <div class="col-4">
+
+      <select class="form-select" aria-label="Default select example" [(ngModel)]="pr">
+        <option selected><b>Seleccione Tipo De Structuramiento</b></option>
+        <option value="1"><b>POO</b></option>
+        <option value="2"><b>Funcional</b></option>
+      </select>
+
+    </div>
+
+  </div>
+
+  <br />
+  <div class="mb-3">
+    <label for="exampleFormControlTextarea1" class="form-label"><b>Description</b></label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" [(ngModel)]="context" rows="3"></textarea>
+  </div>
+  <div class="block-center">
+    <button type="" class="btn btn-success " (click)="add()">Save 👾</button>
+  </div>
+</div>

@@ -1,0 +1,68 @@
+<br/>
+<br/>
+
+
+<!--
+<div class="container">
+<div class="card-group"  *ngFor="let talk of ricks">
+  <div class="card">
+    <img src="{{talk.image}}" class="card-img-top" alt="...">
+    <div class="card-body" >
+      <p class="card-text">{{talk.name}}</p>
+      <strong class="card-text">{{talk.status}}</strong>
+      <span class="status">
+          <span class="status__icon"></span>
+
+          Alive
+     </span>
+
+      <p class="card-text"><small class="text-muted">Last updated 8 mins ago</small></p>
+    </div>
+  </div>
+</div>
+</div>
+
+-->
+
+
+
+<div class="container">
+<div class="card-group ellipsis">
+<div class="col-md-6 ellipsis mb-4" *ngFor="let talk of ricks">
+  <div class="card bg-dark text-white h-100 borde"  [ngClass]="{'verde':talk.status=='Alive','rojo':talk.status=='Dead','gris':talk.status=='unknown'}"style="max-width: 540px;">
+    <div class="row g-0 ">
+    <div class="col-md-4">
+      <img src="{{talk.image}}" class="img-fluid rounded-start" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+          <h5 class="card-title"><b>{{talk.name}}</b></h5>
+        <span class="status">
+          <span class="status__icon" [ngClass]="{'alive':talk.status=='Alive','dead':talk.status=='Dead','unknown':talk.status=='unknown'}"></span>
+          <b> {{talk.status}} - {{talk.species}} </b>
+        </span>
+        <span><b>Last known location: 
+                {{talk.location["name"].slice(0,16)}}</b></span>
+        
+        <h6><b>First seen in:</b></h6>
+        <p><a href="{{talk.episode[0]}}"><b>{{talk.episode[0]}}</b></a></p>
+       </div>
+
+    </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,36 @@
+.borde{
+        
+    &.verde{  border-color : rgb(85, 204, 68); }
+    &.rojo{ border-color : red }
+    &.gris { border-color : grey}
+
+}
+
+
+.ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+}
+
+.status {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    text-transform: capitalize;
+
+
+    .status__icon {
+    height: 0.5rem;
+    width: 0.5rem;
+    margin-right: 0.375rem;
+    border-radius: 50%;
+    
+    &.alive{  background: rgb(85, 204, 68); }
+    &.dead{ background : red }
+    &.unknown { background : grey}
+}
+}
+
+

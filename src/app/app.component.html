@@ -1,0 +1,50 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="['/']"><b>Netflox</b>🚀</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="'/'"><b>Home</b></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="'/'"><b>movies</b></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink='/coctel'><b>cocteles</b></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="'/'"><b>add</b></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink='/morty_api/'><b>morty</b></a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+
+<router-outlet></router-outlet>
+
+
+<!--
+<div class="row">
+	<ng-container *ngFor="let movie of movies; let i = index">
+		<div class="col-3" *ngIf="movie.id != 5">
+			<div class="card">
+				<div class="card-body">
+					<h5 class="card-title">{{ movie.name }}</h5>
+					<p class="card-text"></p>
+					<a href="#" class="btn btn-primary">Ver detalle</a>
+				</div>
+			</div>
+		</div>
+	</ng-container>	
+</div>-->
